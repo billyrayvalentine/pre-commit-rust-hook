@@ -1,0 +1,16 @@
+---
+- id: rustfmt-check
+  name: Run rustfmt --check
+  description: Check Rust code is rustfmt-ed but don't change
+  entry: rustfmt
+  language: system
+  types: [text, rust]
+  #args: ['--check', '--files-with-diff']
+  args: ['--check']
+
+- id: rustfmt
+  name: Run rustfmt
+  description: Check Rust code is rustfmt-ed and format
+  entry: rustfmt
+  language: system
+  types: [text, rust]
